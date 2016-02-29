@@ -34,6 +34,7 @@ class TabBarViewController: UIViewController {
     
     
     
+    @IBOutlet weak var exploreBubble: UIImageView!
     
     @IBOutlet weak var contentView: UIView!
     
@@ -74,6 +75,7 @@ class TabBarViewController: UIViewController {
         //manually calls the method didPressTab and passes an artificial button value to run the method
         didPressTab(buttons[selectedIndex])
         
+  
 
     }
 
@@ -120,6 +122,20 @@ class TabBarViewController: UIViewController {
         
         //calls the "viewDidAppear" method of teh viewcontroller you are adding
         vc.didMoveToParentViewController(self)
+        
+        if(selectedIndex == 0 || selectedIndex == 2){
+            
+            // Optionally initialize the property to a desired starting value
+        
+            UIView.animateWithDuration(0.4, animations: {
+                // This causes first view to fade in and second view to fade out
+                self.exploreBubble.alpha = 1
+                print("hi")
+                
+            })
+
+            
+        }
         
         
     }

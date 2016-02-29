@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		590601CB1C8418C400A10234 /* BaseTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590601C91C8418C400A10234 /* BaseTransition.swift */; };
 		590601CC1C8418C400A10234 /* FadeTransition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590601CA1C8418C400A10234 /* FadeTransition.swift */; };
+		590601CE1C841E5100A10234 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 590601CD1C841E5100A10234 /* LoginViewController.swift */; };
 		5961E5FB1C83E22300C7160F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5961E5FA1C83E22300C7160F /* AppDelegate.swift */; };
 		5961E5FD1C83E22300C7160F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5961E5FC1C83E22300C7160F /* ViewController.swift */; };
 		5961E6001C83E22300C7160F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5961E5FE1C83E22300C7160F /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* Begin PBXFileReference section */
 		590601C91C8418C400A10234 /* BaseTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTransition.swift; sourceTree = "<group>"; };
 		590601CA1C8418C400A10234 /* FadeTransition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FadeTransition.swift; sourceTree = "<group>"; };
+		590601CD1C841E5100A10234 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5961E5F71C83E22300C7160F /* Tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5961E5FA1C83E22300C7160F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5961E5FC1C83E22300C7160F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -93,6 +95,7 @@
 		5961E5EE1C83E22300C7160F = {
 			isa = PBXGroup;
 			children = (
+				590601CD1C841E5100A10234 /* LoginViewController.swift */,
 				59D163A31C83EA0D00F2CB32 /* HomeViewController.swift */,
 				5961E5F91C83E22300C7160F /* Tumblr */,
 				5961E60E1C83E22300C7160F /* TumblrTests */,
@@ -290,6 +293,7 @@
 				59D163A81C83EB8A00F2CB32 /* ComposeViewController.swift in Sources */,
 				5961E5FB1C83E22300C7160F /* AppDelegate.swift in Sources */,
 				59D163A41C83EA0D00F2CB32 /* HomeViewController.swift in Sources */,
+				590601CE1C841E5100A10234 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

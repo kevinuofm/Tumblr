@@ -68,6 +68,12 @@
                             <view contentMode="scaleToFill" id="mWW-kD-0qj">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="ygD-4h-0NW">
+                                        <rect key="frame" x="0.0" y="460" width="185" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -75,6 +81,7 @@
                     </view>
                     <connections>
                         <outlet property="contentView" destination="mWW-kD-0qj" id="adS-91-YdC"/>
+                        <outlet property="exploreBubble" destination="ygD-4h-0NW" id="a9r-Yg-222"/>
                         <outletCollection property="buttons" destination="YsC-zC-fw9" collectionClass="NSMutableArray" id="5r1-VR-L0i"/>
                         <outletCollection property="buttons" destination="IUa-ud-ac2" collectionClass="NSMutableArray" id="Be5-xa-L0f"/>
                         <outletCollection property="buttons" destination="aaX-zb-rl7" collectionClass="NSMutableArray" id="Q6I-0e-cvg"/>
@@ -105,6 +112,14 @@
                                         <rect key="frame" x="89" y="161" width="146" height="146"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3nq-dM-Ubn">
+                                        <rect key="frame" x="257" y="26" width="63" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="didPressLogin:" destination="vhh-Fx-neb" eventType="touchUpInside" id="cnA-if-KAv"/>
+                                            <segue destination="iKc-Wl-jCl" kind="modal" id="90z-ah-fsZ"/>
+                                        </connections>
+                                    </button>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="home_overlay" id="XLd-0u-odH">
                                         <rect key="frame" x="2" y="245" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
@@ -159,6 +174,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="V23-wh-q3O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="959" y="406"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="5qg-61-83D">
+            <objects>
+                <viewController id="iKc-Wl-jCl" customClass="LoginViewController" customModule="Tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NEN-pY-mq1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="login_form" id="zsf-X9-wQL">
+                                <rect key="frame" x="12" y="133" width="300" height="132"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Mo-V5-JCB">
+                                <rect key="frame" x="12" y="223" width="146" height="42"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="didPressCancel:" destination="iKc-Wl-jCl" eventType="touchUpInside" id="kpp-CV-wRh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginView" destination="NEN-pY-mq1" id="shc-od-3P3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oL9-Q6-SvT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="760" y="1099"/>
         </scene>
         <!--Compose View Controller-->
         <scene sceneID="BGL-fO-zh1">
@@ -254,12 +299,14 @@
         <image name="account_selected_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>
         <image name="home_selected_icon" width="35" height="35"/>
         <image name="home_spinner" width="146" height="146"/>
         <image name="link_icon" width="75" height="95"/>
+        <image name="login_form" width="300" height="132"/>
         <image name="nevermind" width="320" height="53"/>
         <image name="photo_icon" width="75" height="95"/>
         <image name="quote_icon" width="75" height="96"/>
