@@ -4,9 +4,7 @@ This project submission is CodePath's week 4 homework of Tumblr by Kevin Zhu
 
 Time spent: 6 hours spent in total
 
-Completed project requirements:
- 
- Completed user stories:
+ Completed project requirements:
 
 Setup
  * [x] Create a new project (disable Auto Layout).
@@ -59,12 +57,12 @@ Login
  * [x] Optional: Create a Custom Transition to fade in the login screen.
 
 Bobbing Discover Bubble
- * [] Optional: Add an image view to the custom tab bar controller. When the appropriate button is selected, hide the bubble. Otherwise, show it.
+ * [ ] Optional: Add an image view to the custom tab bar controller. When the appropriate button is selected, hide the bubble. Otherwise, show it.
 
 Loading
- * [] Optional: Show the custom loading indicator by playing the sequence of pngs.
-   * [] Add a viewWillAppear method to the searchViewController. Within the viewWillAppear method, hide the background image feed and show the custom loading indicator.
-   * [] Add a viewDidAppear method to the searchViewController. Within the viewDidAppear method, add a delay method. In the completion block of the delay, hide the custom loading indicator and show the background image feed.
+ * [ ] Optional: Show the custom loading indicator by playing the sequence of pngs.
+   * [ ] Add a viewWillAppear method to the searchViewController. Within the viewWillAppear method, hide the background image feed and show the custom loading indicator.
+   * [ ] Add a viewDidAppear method to the searchViewController. Within the viewDidAppear method, add a delay method. In the completion block of the delay, hide the custom loading indicator and show the background image feed.
 
  
 Notes:
