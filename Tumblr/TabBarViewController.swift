@@ -11,6 +11,28 @@ import UIKit
 class TabBarViewController: UIViewController {
 
     
+    var fadeTransition: FadeTransition!
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        // Access the ViewController that you will be transitioning too, a.k.a, the destinationViewController.
+        var destinationViewController = segue.destinationViewController
+        
+        // Set the modal presentation style of your destinationViewController to be custom.
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        // Create a new instance of your fadeTransition.
+        fadeTransition = FadeTransition()
+        
+        // Tell the destinationViewController's  transitioning delegate to look in fadeTransition for transition instructions.
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        // Adjust the transition duration. (seconds)
+        fadeTransition.duration = 1.0
+    }
+    
+    
+    
     
     
     @IBOutlet weak var contentView: UIView!
@@ -102,6 +124,9 @@ class TabBarViewController: UIViewController {
         
     }
     
+    @IBAction func didPressCompose(sender: AnyObject) {
+        performSegueWithIdentifier("composeSegue", sender: self)
+    }
     
     
     

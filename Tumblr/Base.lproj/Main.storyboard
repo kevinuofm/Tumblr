@@ -39,6 +39,10 @@
                                         <rect key="frame" x="135" y="4" width="50" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="compose_button"/>
+                                        <connections>
+                                            <action selector="didPressCompose:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oDR-QV-nv8"/>
+                                            <segue destination="qGA-tS-aaJ" kind="modal" identifier="composeSegue" modalTransitionStyle="coverVertical" id="bQG-Wj-Ogs"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2HJ-9v-8uw">
                                         <rect key="frame" x="277" y="4" width="35" height="35"/>
@@ -198,10 +202,16 @@
                                 <rect key="frame" x="0.0" y="515" width="320" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" image="nevermind"/>
+                                <connections>
+                                    <action selector="didPressNevermind:" destination="qGA-tS-aaJ" eventType="touchUpInside" id="WIb-8i-cEN"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.1529411765" green="0.1960784314" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="composeView" destination="OXv-JE-Ci3" id="hHG-Aq-3ew"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sfO-Lw-uNa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

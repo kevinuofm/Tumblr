@@ -10,8 +10,40 @@ import UIKit
 
 class ComposeViewController: UIViewController {
 
+    
+    var fadeTransition: FadeTransition!
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        var destinationViewController = segue.destinationViewController
+        
+        destinationViewController.modalPresentationStyle = UIModalPresentationStyle.Custom
+        
+        fadeTransition = FadeTransition()
+        
+        destinationViewController.transitioningDelegate = fadeTransition
+        
+        fadeTransition.duration = 1.0
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+       // composeView.alpha = 0.5
+        
+    }
+    
+    
+    
+    @IBOutlet var composeView: UIView!
+    
+    
+    override func viewDidAppear(animated: Bool) {
+        
+    }
+        
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        composeView.alpha = 0.5
 
         // Do any additional setup after loading the view.
     }
@@ -21,6 +53,13 @@ class ComposeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func didPressNevermind(sender: AnyObject) {
+        
+        // dismisses the segue
+        dismissViewControllerAnimated(true, completion: nil)
+        
+        
+    }
 
     /*
     // MARK: - Navigation
